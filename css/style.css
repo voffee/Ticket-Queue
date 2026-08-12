@@ -1,0 +1,28 @@
+
+/* Root Variables */
+:root {
+
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+#billing-panel {
+    background-color: aqua;
+}
+
+#tech-panel {
+    background-color: yellow;
+}
+
+#sales-panel {
+    background-color: greenyellow;
+}
