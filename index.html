@@ -13,11 +13,37 @@
     <div class="app-container">
         <div class="helpdesk-queue-control-panel">
             <h1>HELPDESK QUEUE</h1>
-            <input type="button" value="Add Ticket">
-            <input type="button" value="Undo Last">
-            <input type="button" value="Redo Last">
+            <button>Add Ticket</button>
+            <button>Undo Last</button>
+            <button>Redo Last</button>
+
+            <div id="ticket-display-open">
+                <span>OPEN</span>
+                <span aria-live="polite">6</span>
+            </div>
+
+            <div id="ticket-display-urgent">
+                <span>URGENT</span>
+                <span aria-live="assertive">1</span>
+            </div>
+
+            <label for="" class="switch"> VIEW ALL
+                <input type="checkbox" id="view-all">
+                <span class="slider"></span>
+            </label>
 
             <div class="tabs">
+                <div role="tablist">
+                    <button role="tab" id="billing-tab" aria-controls="billing-panel" aria-selected="true" tabindex="0">Billing</button>
+
+                    <button role="tab" id="tech-tab" aria-controls="tech-panel" aria-selected="false" tabindex="-1">Tech</button>
+
+                    <button role="tab" id="sales-tab" aria-controls="sales-panel" aria-selected="false" tabindex="-1">Sales</button>
+                </div>
+
+                <div role="tabpanel" id="billing-panel" aria-labelledby="billing-tab">billing content here</div>
+                <div role="tabpanel" id="tech-panel" aria-labelledby="tech-tab" hidden>tech content here</div>
+                <div role="tabpanel" id="sales-panel" aria-labelledby="sales-tab" hidden>sales content here</div>
             </div>
         </div>
         <div class="ticket-queue-display">
