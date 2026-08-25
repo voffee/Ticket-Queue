@@ -2,6 +2,9 @@
 /* Root Variables */
 :root {
 
+    /* Color Variables */
+    --control-panel-blue: #2F15FF;
+    --modal-pink: #E85EF7;
 }
 
 /* Global Reset */
@@ -12,7 +15,18 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
+/* Control Panel Styling */
+.helpdesk-queue-control-panel {
+    background-color: var(--control-panel-blue);
+    height: 20rem;
+    width: 30rem;
 }
 
 #billing-panel {
@@ -27,6 +41,27 @@ body {
     background-color: greenyellow;
 }
 
+/* Modal Styling */
 .modal {
-    
+    background-color: var(--modal-pink);
+    height: 20rem;
+    width: 15rem;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    opacity: 95%;
+}
+
+.modal::backdrop {
+    background-color: yellow;
+    opacity: 70%;
+}
+
+.modal:not([open]) {
+    display: none;
 }
