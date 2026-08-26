@@ -5,6 +5,7 @@
     /* Color Variables */
     --control-panel-blue: #2F15FF;
     --modal-pink: #E85EF7;
+    --font-color: #FFF;
 }
 
 /* Global Reset */
@@ -27,6 +28,12 @@ body {
     background-color: var(--control-panel-blue);
     height: 20rem;
     width: 30rem;
+    
+    display: grid;
+
+    & h1 {
+        color: var(--font-color);
+    }
 }
 
 #billing-panel {
@@ -64,4 +71,20 @@ body {
 
 .modal:not([open]) {
     display: none;
+}
+
+/* Utility Classes */
+
+.VT323-large {
+    font-family: "VT323", monospace;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.ibm-plex-mono-medium {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
 }
