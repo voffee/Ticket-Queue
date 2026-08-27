@@ -13,9 +13,9 @@
     <div class="app-container">
         <div class="helpdesk-queue-control-panel">
             <h1 class="VT323-large">HELPDESK QUEUE</h1>
-            <button>Add Ticket</button>
-            <button>Undo Last</button>
-            <button>Redo Last</button>
+            <button class="add">Add Ticket</button>
+            <button class="undo">Undo Last</button>
+            <button class="redo">Redo Last</button>
 
             <div id="ticket-display-open">
                 <span class="ibm-plex-mono-medium">OPEN</span>
@@ -40,8 +40,9 @@
 
                     <button role="tab" id="sales-tab" aria-controls="sales-panel" aria-selected="false" tabindex="-1">Sales</button>
                 </div>
-
-                <div role="tabpanel" id="billing-panel" aria-labelledby="billing-tab">
+            </div>
+            
+            <div role="tabpanel" id="billing-panel" aria-labelledby="billing-tab">
                     <div class="ticket-card">
                         <p>#01</p>
                         <p>VPN not connecting</p>
@@ -52,7 +53,6 @@
                 <div role="tabpanel" id="tech-panel" aria-labelledby="tech-tab">tech content here</div>
                 <div role="tabpanel" id="sales-panel" aria-labelledby="sales-tab">sales content here</div>
             </div>
-        </div>
 
         <div class="modal-container">
             <dialog class="modal">

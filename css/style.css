@@ -6,6 +6,7 @@
     --control-panel-blue: #2F15FF;
     --modal-pink: #E85EF7;
     --font-color: #FFF;
+    --generic-red-color: #ED2939;
 }
 
 /* Global Reset */
@@ -30,9 +31,60 @@ body {
     width: 30rem;
     
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.25rem;
 
     & h1 {
         color: var(--font-color);
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: center;
+    }
+
+    & .add {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+
+    & .undo {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    & .redo {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    & #ticket-display-open {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        align-self: center;
+        justify-self: center;
+        color: var(--font-color);
+    }
+
+    & #ticket-display-urgent {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+        align-self: center;
+        justify-self: center;
+        color: var(--generic-red-color);
+    }
+
+    & .switch {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        align-self: center;
+        justify-self: center;
+    }
+
+    & .tabs {
+        grid-column: 2 / 4;
+        grid-row: 4 / 6;
+        display: grid;
     }
 }
 
