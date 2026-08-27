@@ -32,16 +32,14 @@
                 <span class="slider"></span>
             </label>
 
-            <div class="tabs">
-                <div role="tablist">
-                    <button role="tab" id="billing-tab" aria-controls="billing-panel" aria-selected="true" tabindex="0">Billing</button>
+            <div role="tablist">
+                <button role="tab" id="billing-tab" aria-controls="billing-panel" aria-selected="true" tabindex="0">Billing</button>
 
-                    <button role="tab" id="tech-tab" aria-controls="tech-panel" aria-selected="false" tabindex="-1">Tech</button>
+                <button role="tab" id="tech-tab" aria-controls="tech-panel" aria-selected="false" tabindex="-1">Tech</button>
 
-                    <button role="tab" id="sales-tab" aria-controls="sales-panel" aria-selected="false" tabindex="-1">Sales</button>
-                </div>
+                <button role="tab" id="sales-tab" aria-controls="sales-panel" aria-selected="false" tabindex="-1">Sales</button>
             </div>
-            
+
             <div role="tabpanel" id="billing-panel" aria-labelledby="billing-tab">
                     <div class="ticket-card">
                         <p>#01</p>
@@ -49,10 +47,11 @@
                         <p>Tech</p>
                         <p>High</p>
                     </div>
-                </div>
-                <div role="tabpanel" id="tech-panel" aria-labelledby="tech-tab">tech content here</div>
-                <div role="tabpanel" id="sales-panel" aria-labelledby="sales-tab">sales content here</div>
             </div>
+
+            <div role="tabpanel" id="tech-panel" aria-labelledby="tech-tab">tech content here</div>
+
+            <div role="tabpanel" id="sales-panel" aria-labelledby="sales-tab">sales content here</div>
 
         <div class="modal-container">
             <dialog class="modal">

@@ -81,23 +81,44 @@ body {
         justify-self: center;
     }
 
-    & .tabs {
+    & [role="tablist"] {
         grid-column: 2 / 4;
         grid-row: 4 / 6;
+
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        & #billing-tab {
+            grid-column: 1 / 2;
+        }
+
+        & #tech-tab {
+            grid-column: 2 / 3;
+            color: red;
+        }
+
+        & #sales-tab {
+            grid-column: 3 / 4;
+        }
     }
-}
 
-#billing-panel {
-    background-color: aqua;
-}
+    & #billing-panel {
+        grid-column: 1 / 4;
+        grid-row: 6 / 7;
+        background-color: aqua;
+    }
 
-#tech-panel {
-    background-color: yellow;
-}
+    & #tech-panel {
+        grid-column: 1 / 4;
+        grid-row: 7 / 8;
+        background-color: yellow;
+    }
 
-#sales-panel {
-    background-color: greenyellow;
+    & #sales-panel {
+        grid-column: 1 / 4;
+        grid-row: 8 / 9;
+        background-color: greenyellow;
+    }
 }
 
 /* Modal Styling */
