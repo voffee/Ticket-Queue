@@ -13,18 +13,18 @@
     <div class="app-container">
         <div class="helpdesk-queue-control-panel">
             <h1 class="VT323-large">HELPDESK QUEUE</h1>
-            <button class="add">Add Ticket</button>
-            <button class="undo">Undo Last</button>
-            <button class="redo">Redo Last</button>
+            <button class="add ibm-plex-mono-alt">Add Ticket</button>
+            <button class="undo ibm-plex-mono-alt">Undo Last</button>
+            <button class="redo ibm-plex-mono-alt">Redo Last</button>
 
             <div id="ticket-display-open">
                 <span class="ibm-plex-mono-medium">OPEN</span>
-                <span aria-live="polite" aria-label="Open tickets">6</span>
+                <span class="ibm-plex-mono-alt" aria-live="polite" aria-label="Open tickets">6</span>
             </div>
 
             <div id="ticket-display-urgent">
                 <span class="ibm-plex-mono-medium">URGENT</span>
-                <span aria-live="assertive" aria-label="Urgent tickets">1</span>
+                <span class="ibm-plex-mono-alt" aria-live="assertive" aria-label="Urgent tickets">1</span>
             </div>
 
             <label for="view-all" class="switch ibm-plex-mono-medium"> VIEW ALL
@@ -33,11 +33,11 @@
             </label>
 
             <div role="tablist">
-                <button role="tab" id="billing-tab" aria-controls="billing-panel" aria-selected="true" tabindex="0">Billing</button>
+                <button role="tab" class="ibm-plex-mono-small" id="billing-tab" aria-controls="billing-panel" aria-selected="true" tabindex="0">Billing</button>
 
-                <button role="tab" id="tech-tab" aria-controls="tech-panel" aria-selected="false" tabindex="-1">Tech</button>
+                <button role="tab" class="ibm-plex-mono-small" id="tech-tab" aria-controls="tech-panel" aria-selected="false" tabindex="-1">Tech</button>
 
-                <button role="tab" id="sales-tab" aria-controls="sales-panel" aria-selected="false" tabindex="-1">Sales</button>
+                <button role="tab" class="ibm-plex-mono-small" id="sales-tab" aria-controls="sales-panel" aria-selected="false" tabindex="-1">Sales</button>
             </div>
 
             <div role="tabpanel" id="billing-panel" aria-labelledby="billing-tab">
