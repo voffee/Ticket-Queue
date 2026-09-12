@@ -231,7 +231,7 @@ body {
 /* Modal Styling */
 .modal {
     background-color: var(--generic-hot-pink);
-    height: 20rem;
+    height: 22rem;
     width: 15rem;
     display: block;
 
@@ -239,10 +239,12 @@ body {
     left: 25%;
     transform: translate(-50%, -50%);
     opacity: 95%;
+    box-shadow: -0.3rem -0.3rem var(--generic-green);
+    border-radius: 0.3rem;
 
     &::backdrop {
-        background-color: var(--generic-yellow);
-        opacity: 70%;
+        background-color: var(--generic-grey);
+        opacity: 55%;
     }
 
     & form {
@@ -259,11 +261,14 @@ body {
         & #department-label {
             grid-column: 1 / 3;
             grid-row: 2 / 3;
+            align-self: center;
             justify-self: center;
+            text-decoration: underline; 
         }
         & #department {
             grid-column: 1 / 3;
             grid-row: 3 / 4;
+            align-self: center;
             justify-self: center;
             height: 50%;
             width: 80%;
@@ -271,14 +276,47 @@ body {
         & #subject-label {
             grid-column: 1 / 3;
             grid-row: 4 / 5;
+            align-self: center;
             justify-self: center;
+            text-decoration: underline; 
         }
         & #subject {
             grid-column: 1 / 3;
             grid-row: 5 / 6;
+            align-self: center;
             justify-self: center;
             height: 50%;
             width: 80%;
+        }
+        & #priority-label {
+            grid-column: 1 / 3;
+            grid-row: 6 / 7;
+            align-self: center;
+            justify-self: center;
+            text-decoration: underline; 
+        }
+        & #priority {
+            grid-column: 1 / 3;
+            grid-row: 7 / 8;
+            align-self: center;
+            justify-self: center;
+            height: 50%;
+            width: 80%;
+        }
+        & #emergency-override-label {
+            grid-column: 1 / 2;
+            grid-row: 8 / 9;
+            justify-self: center;
+            padding: 0rem 0rem 0rem 0.5rem;
+        }
+        & #emergency-override {
+            grid-column: 2 / 3;
+            grid-row: 8 / 9;
+            align-self: center;
+            justify-self: center;
+            height: 2rem;
+            width: 2.1rem;
+            background-color: var(--generic-red-color);
         }
     }
 }
@@ -321,4 +359,10 @@ body {
     font-weight: 500;
     font-style: normal;
     font-size: 1.3rem;
+}
+.ibm-plex-mono-alt-special {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
 }
