@@ -10,8 +10,10 @@ const modal = document.querySelector(".modal");
 
 // Click Handler
 function tabClickHandler(e) {
-    console.log(e.target);
-    tabs.forEach(element => {});
+    tabs.forEach(element => {
+        element.ariaSelected = false;
+        e.target.ariaSelected = true;
+    });
 }
 
 console.log(tabs);
