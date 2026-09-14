@@ -74,6 +74,12 @@ body {
         grid-row: 3 / 4;
     }
 
+    & .undo:hover, .redo:hover {
+        background-color: var(--generic-yellow);
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
     & #ticket-display-open {
         grid-column: 3 / 4;
         grid-row: 2 / 3;
@@ -128,6 +134,20 @@ body {
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+
+        & [role="tab"]:hover {
+            background-color: var(--generic-yellow);
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        & [role="tab"][aria-selected="true"] {
+            background-color: var(--generic-green);
+        }
+
+        & [role="tab"][aria-selected="true"]:hover {
+            background-color: var(--generic-yellow);
+        }
 
         & #billing-tab {
             grid-column: 1 / 2;
@@ -220,12 +240,6 @@ body {
 /* Button Styling */
 .control-panel-button {
     background-color: var(--generic-grey);
-
-    &:hover {
-        background-color: var(--generic-yellow);
-        opacity: 0.9;
-        cursor: pointer;
-    }
 }
 
 /* Modal Styling */
@@ -233,7 +247,6 @@ body {
     background-color: var(--generic-hot-pink);
     height: 22rem;
     width: 15rem;
-    display: block;
 
     top: 50%;
     left: 25%;
@@ -321,9 +334,9 @@ body {
     }
 }
 
-/* .modal:not([open]) {
+.modal:not([open]) {
     display: none;
-} */
+}
 
 /* Utility Classes */
 .VT323-large {

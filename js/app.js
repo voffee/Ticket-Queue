@@ -1,8 +1,20 @@
 
 console.log("Hello World");
 
-// Declaring variables
+// Tab variables
+const tabs = document.querySelectorAll('[role="tab"]');
+const tabPanels = document.querySelectorAll('[role="tabpanel"]');
 
+// Modal variables
 const modal = document.querySelector(".modal");
 
-console.log(modal);
+// Click Handler
+function tabClickHandler(e) {
+    console.log(e.target);
+    tabs.forEach(element => {});
+}
+
+console.log(tabs);
+console.log(tabPanels);
+
+tabs.forEach(element => {element.addEventListener('click', tabClickHandler)});
