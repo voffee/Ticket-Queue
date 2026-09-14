@@ -12,11 +12,21 @@ const modal = document.querySelector(".modal");
 function tabClickHandler(e) {
     tabs.forEach(element => {
         element.ariaSelected = false;
-        e.target.ariaSelected = true;
+    });
+
+    e.target.ariaSelected = true;
+
+    const tabID = e.target.getAttribute('aria-controls');
+
+    tabPanels.forEach(element => {
+        if(element.id === tabID) {
+            element.hidden = false;
+        }
+
+        else {
+            element.hidden = true;
+        }
     });
 }
-
-console.log(tabs);
-console.log(tabPanels);
 
 tabs.forEach(element => {element.addEventListener('click', tabClickHandler)});
