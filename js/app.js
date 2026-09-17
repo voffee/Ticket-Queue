@@ -37,8 +37,14 @@ function tabClickHandler(e) {
     });
 }
 
+// Modal Handler
 function modalHandler() {
     modal.showModal();
+}
+
+// Data Bundler
+function dataBundler() {
+    
 }
 
 tabs.forEach(element => {element.addEventListener('click', tabClickHandler)});
