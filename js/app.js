@@ -7,6 +7,7 @@ const tabPanels = document.querySelectorAll('[role="tabpanel"]');
 
 // Modal variables
 const modal = document.querySelector(".modal");
+const addModal = document.querySelector(".add");
 
 // Click Handler
 function tabClickHandler(e) {
@@ -36,4 +37,10 @@ function tabClickHandler(e) {
     });
 }
 
+function modalHandler() {
+    modal.showModal();
+}
+
 tabs.forEach(element => {element.addEventListener('click', tabClickHandler)});
+
+addModal.addEventListener("click", modalHandler);
