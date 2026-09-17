@@ -19,10 +19,12 @@ function tabClickHandler(e) {
     const tabID = e.target.getAttribute('aria-controls');
 
     tabPanels.forEach(element => {
+        // const elementStyle = window.getComputedStyle(element);
+
         if(element.id === tabID) {
             element.hidden = false;
+            element.style.overflowY = 'auto';
         }
-
         else {
             element.hidden = true;
         }
