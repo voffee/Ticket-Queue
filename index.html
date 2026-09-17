@@ -104,8 +104,8 @@
             </div>
 
         <div class="modal-container">
-            <dialog class="modal">
-                <form action="submit">
+            <dialog class="modal" open>
+                <form action="#">
                     <h3 class="VT323-small">NEW TICKET</h3>
 
                     <label for="department" id="department-label" class="ibm-plex-mono-small">Department</label>
@@ -124,8 +124,10 @@
                         <option value="high">High</option>
                     </select>
 
+                    <button type="submit" id="submit" class="ibm-plex-mono-alt-special">Submit</button>
+
                     <label for="emergency-override" id="emergency-override-label" class="ibm-plex-mono-alt-special">Emergency Override</label>
-                    <button id="emergency-override"></button>
+                    <button type="button" id="emergency-override"></button>
                 </form>
             </dialog>
         </div>
