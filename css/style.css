@@ -164,39 +164,44 @@ body {
 
     & #billing-panel {
         grid-column: 1 / 4;
-        grid-row: 5 / 6;
+        grid-row: 5 / 8;
 
         min-height: 0;
-        max-height: 5rem;
+        max-height: 15rem;
         overflow-y: auto;
     }
 
     & #tech-panel {
         grid-column: 1 / 4;
-        grid-row: 5 / 6;
+        grid-row: 5 / 8;
 
         min-height: 0;
-        max-height: 5rem;
+        max-height: 15rem;
         overflow-y: auto;
     }
 
     & #sales-panel {
         grid-column: 1 / 4;
-        grid-row: 5 / 6;
+        grid-row: 5 / 8;
 
         min-height: 0;
-        max-height: 5rem;
+        max-height: 15rem;
         overflow-y: auto;
     }
 }
 
-[role=tabpanel][aria-selected="true"] {
-    
+[role=tabpanel]:not([hidden]) {
+    grid-column: 1 / 4;
+    grid-row: 5 / 8;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .ticket-card {
     background-color: var(--premium-white);
     opacity: 0.95;
+    margin: 0.2rem 0rem 0.2rem 0rem;
 
     display: grid;
     grid-template-columns: 1fr 0.5fr;
