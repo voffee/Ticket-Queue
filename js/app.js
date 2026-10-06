@@ -7,7 +7,8 @@ const tabPanels = document.querySelectorAll('[role="tabpanel"]');
 
 // Modal variables
 const modal = document.querySelector(".modal");
-const addModal = document.querySelector(".add");
+const addTicket = document.querySelector(".add");
+const cancelTicket = document.querySelector("#cancel");
 
 // Click Handler
 function tabClickHandler(e) {
@@ -40,6 +41,7 @@ function tabClickHandler(e) {
 // Modal Handler
 function modalHandler() {
     modal.showModal();
+    cancelTicket.addEventListener("click",() => modal.close());
 }
 
 // Data Bundler
@@ -49,4 +51,5 @@ function dataBundler() {
 
 tabs.forEach(element => {element.addEventListener('click', tabClickHandler)});
 
-addModal.addEventListener("click", modalHandler);
+addTicket.addEventListener("click", modalHandler);
+cancelTicket.addEventListener("click", modal.close());

@@ -291,7 +291,7 @@ body {
 
     & form {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr auto auto;
         gap: 0.5rem;
 
@@ -343,16 +343,37 @@ body {
             justify-self: center;
             width: 80%;
         }
-        & #submit {
-            grid-column: 1 / 3;
+        & #cancel {
+            grid-column: 1 / 2;
             grid-row: 8 / 9;
             align-self: center;
             justify-self: center;
-            height: 2.3rem;
-            width: 10rem;
+            height: 2.5rem;
+            width: 2.5rem;
+            margin: 0.3rem 0rem 0.3rem 0rem;
+            border-radius: 0.3rem;
+            background-color: var(--generic-yellow);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--generic-red-color);
+            }
+        }
+        & #submit {
+            grid-column: 2 / 3;
+            grid-row: 8 / 9;
+            align-self: center;
+            justify-self: center;
+            height: 3rem;
+            width: 7rem;
             margin: 0.3rem 0rem 0.3rem 0rem;
             border-radius: 0.3rem;
             background-color: var(--generic-green);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--generic-yellow);
+            }
         }
 
         & #emergency-override-label {
@@ -368,14 +389,15 @@ body {
             justify-self: center;
             height: 2rem;
             width: 2.1rem;
+            cursor: pointer;
             background-color: var(--generic-red-color);
         }
     }
 }
 
-/* .modal:not([open]) {
+.modal:not([open]) {
     display: none;
-} */
+}
 
 /* Utility Classes */
 .VT323-large {
