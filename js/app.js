@@ -5,10 +5,16 @@ console.log("Hello World");
 const tabs = document.querySelectorAll('[role="tab"]');
 const tabPanels = document.querySelectorAll('[role="tabpanel"]');
 
-// Modal variables
+// Modal-related variables
 const modal = document.querySelector(".modal");
 const addTicket = document.querySelector(".add");
 const cancelTicket = document.querySelector("#cancel");
+const departmentSelect = document.querySelector("#department");
+const subjectSelect = document.querySelector("#subject");
+const prioritySelect = document.querySelector("#priority");
+
+// Ticket queue related variables
+
 
 // Click Handler
 function tabClickHandler(e) {
@@ -41,7 +47,22 @@ function tabClickHandler(e) {
 // Modal Handler
 function modalHandler() {
     modal.showModal();
-    cancelTicket.addEventListener("click",() => modal.close());
+
+    // Get information when fields are updated
+    departmentSelect.addEventListener("change", (e) => {
+        const departmentSelectedValue = e.target.value;
+        console.log(departmentSelectedValue);
+    })
+
+    subjectSelect.addEventListener("change", (e) => {
+        const subjectSelectedValue = e.target.value;
+        console.log(subjectSelectedValue);
+    })
+
+    prioritySelect.addEventListener("change", (e) => {
+        const prioritySelectedValue = e.target.value;
+        console.log(prioritySelectedValue);
+    })
 }
 
 // Data Bundler
@@ -52,4 +73,8 @@ function dataBundler() {
 tabs.forEach(element => {element.addEventListener('click', tabClickHandler)});
 
 addTicket.addEventListener("click", modalHandler);
-cancelTicket.addEventListener("click", modal.close());
+cancelTicket.addEventListener("click",() => modal.close());
+
+console.log(departmentSelect);
+console.log(subjectSelect);
+console.log(prioritySelect);
